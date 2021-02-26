@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+</head>
+<link rel="stylesheet" href="./style.css">
+<script type="text/javascript" src="./deliaddres.js"></script>
+<body>
+    
+<form action="midterm.html">
+    <fieldset id="billingAddress" class="text">
+        <legend>Billing Address</legend>
+        <label for="billFName">First Name</label>
+        <input id="billFName" name="BillingFirstName" type="text" required="required" placeholder=" enter your first name"/><br>
+        <label for="billLName">Last Name</label>
+        <input id="billLName" name="BillingLastName" type="text" required="required"placeholder=" enter your last name" /><br>
+        <label for="billStreet">Street Address</label>
+        <input id="billStreet" name="BillingStreet" type="text" required="required" placeholder=" enter your street address"/><br>
+        <label for="billCity">City</label>
+        <input id="billCity" name="BillingCity" type="text" required="required" placeholder=" enter your city" /><br>
+        <label for="billProvince">Province</label>
+        <select id="billProvince" name="BillingProvince" required="required" placeholder=" enter your province" ><br>
+            
+            <option value="Ontario">ON</option>
+            <option value="Nanuvut">NV</option>
+            <option value="Yukon">YK</option>
+            <option value="Quebec">QC</option>
+            <option value="Manitoba">CA</option>
+            <option value="Alberta">CO</option>
+            <option value="British columbia">CT</option>
+            <option value="Saskatchewan">SK</option>
+            <option value="Northwest Territories">NW</option>
+            <option value="Prince Edward Island">PL</option>
+            <option value="Newfound Land">NL</option>
+            <option value="Labrador">LR</option>
+            <option value="Nova Scotia">NS</option>
+    
+        </select>
+        <label for="billZip">Zip</label>
+        <input id="billZip" name="BillingZip" type="text" required="required"placeholder=" enter your ZIP code" /><br>
+        <label for="billPhone">Phone</label>
+        <input id="billPhone" name="BillingPhone" type="number" required="required" placeholder=" enter your phone number" /><br>
+        <div class="errorMessage"></div>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset id="deliveryAddress" class="text">
+        <legend>Delivery Address</legend>
+        <p> Please Click in the check mark if your Billing Adress is same as Delivery Address</p>
+        <p id="shiptobilling" class="form-row">Same as Billing Address 
+            <input  id="sameaddress" type="checkbox" onclick="SetBilling(this.checked);" checked="checked" /> </p>
+        <!--
+            <div class="checks">
+            <input id="sameAddr" name="SameAddress" type="checkbox" onclick="copyAddress(this.checked); checked = "checked" />
+            <label for="sameAddr">same as billing address</label><br>
+        </div>-->
+
+
+        <label for="delivFName">First Name</label>
+        <input id="delivFName" name="DeliveryFirstName" type="text" required="required"placeholder=" enter your first name" ><br>
+        <label for="delivLName">Last Name</label>
+        <input id="delivLName" name="DeliveryLastName" type="text" required="required" placeholder=" enter your last name" ><br>
+        <label for="delivStreet">Street Address</label>
+        <input id="delivStreet" name="DeliveryStreet" type="text" required="required" placeholder=" enter your street address"  /><br>
+        <label for="delivCity">City</label>
+        <input id="delivCity" name="DeliveryCity" type="text" required="required"placeholder=" enter your city"> <br>
+        <label for="delivProvince">Province</label>
+        <select id="delivProvince" name="DeliveryProvince" required="required" placeholder=" enter your province"><br>
+            <option value="Ontario">ON</option>
+            <option value="Nanuvut">NV</option>
+            <option value="Yukon">YK</option>
+            <option value="Quebec">QC</option>
+            <option value="Manitoba">CA</option>
+            <option value="Alberta">CO</option>
+            <option value="British columbia">CT</option>
+            <option value="Saskatchewan">SK</option>
+            <option value="Northwest Territories">NW</option>
+            <option value="Prince Edward Island">PL</option>
+            <option value="Newfound Land">NL</option>
+            <option value="Labrador">LR</option>
+            <option value="Nova Scotia">NS</option>
+            
+        </select>
+        <label for="delivZip">Zip</label>
+        <input id="delivZip" name="DeliveryZip" type="text" required="required" placeholder=" enter your ZIP code"/><br>
+        <label for="delivPhone">Phone</label>
+        <input id="delivPhone" name="DeliveryPhone" type="number" required="required"placeholder=" enter your phone number" ><br>
+        <div class="errorMessage"></div>
+    </fieldset>
+</form>
+
+    
+</body>
+</html>
